@@ -1,0 +1,75 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "tsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "prettier",
+        "react",
+        "@typescript-eslint",
+        "unused-imports",
+        "simple-import-sort"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": false,
+                "printWidth": 80,
+                "semi": false
+            }
+          ],
+        "indent": [
+            "error",
+            2,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "react/prop-types": "off",
+        "no-multi-spaces": ["error"],
+        "max-len": ["error", {"code": 120, "ignoreTemplateLiterals": true, "ignoreStrings": true}],
+        "@typescript-eslint/no-unused-vars": "off",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{ "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+		],
+        "sort-imports": [
+            "error",
+            {
+              "ignoreDeclarationSort": true,
+              "ignoreCase": true
+            }
+        ],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
+    }
+}
